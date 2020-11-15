@@ -1,1 +1,54 @@
-<p>character-table works!</p>
+<table class="table table-striped">
+    <thead class="">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Lugar de Origen</th>
+        <th scope="col">Estatus</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Print all Tasks in table -->
+      <tr *ngFor="let char of characters">
+        <th scope="row">{{ char.name }}</th>
+        <td>{{ char.origin.name }}</td>
+        <td>{{ char.status }}</td>
+        <td>
+          <a
+            [routerLink]="['/']" routerLinkActive="router-link-active" 
+            class="btn btn-info btn-sm mr-2" hidden= 'esAutenticado()'
+          >
+            Quitar de favoritos
+          </a>
+          <a
+            [routerLink]="['char', char.id]" routerLinkActive="router-link-active" 
+            class="btn btn-info btn-sm mr-2"
+            (click) = charDetails(char.id)
+          >
+            Ir a detalles
+          </a>
+          <button
+            type="button"
+            class="btn btn-danger btn-sm"
+          >
+            Favoritos
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button
+    type="button"
+    class="btn btn-danger btn-sm"
+    (click) = loadNext()
+    >
+    Siguiente
+</button>
+<button
+    type="button"
+    class="btn btn-danger btn-sm"
+    (click) = loadPrev()
+    hidden = !esAutenticado()
+    >
+    Previo
+    </button>    

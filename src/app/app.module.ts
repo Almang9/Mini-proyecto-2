@@ -14,13 +14,21 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CharacterListComponent } from './pages/character-list/character-list.component';
 import { CharacterTableComponent } from './components/character-table/character-table.component';
+import { LoginComponent } from './pages/login/login.component';
+import { CharacterComponent } from './pages/character/character.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { BotonesDePasarPagComponent } from './components/botones-de-pasar-pag/botones-de-pasar-pag.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     NavBarComponent,
     CharacterListComponent,
-    CharacterTableComponent
+    CharacterTableComponent,
+    LoginComponent,
+    CharacterComponent,
+    FavoritesComponent,
+    BotonesDePasarPagComponent
   ],
   imports: [
     BrowserModule,
