@@ -1,1 +1,17 @@
-<p>character works!</p>
+<div class="card" style="width: 18rem;">
+    <img src={{personaje.image}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{personaje.name}}</h5>
+      <p class="card-text">Status {{personaje.status}} </p>
+      <p class="card-text">Origen {{personaje.origin.name}} </p>
+      <p class="card-text">Especie {{personaje.species}} </p>
+      <p class="card-text">Tipo {{personaje.type}} </p>
+      <p class="card-text">Localizacion {{personaje.location.name}} </p>
+      <a href="#" class="btn btn-primary">Añdir a Favoritos</a>
+    </div>
+</div>
+<button
+    type="button"
+    class="btn btn-danger btn-sm"
+    (click) = test()
+    > Prueba</button>
