@@ -9,9 +9,9 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  {path: '',
+  {path: 'home',
    component: HomepageComponent},
-   {path: 'characters',
+   {path: '',
    component: CharacterListComponent,
    },
    {path: 'profile/:userId',
@@ -22,10 +22,10 @@ const routes: Routes = [
   canActivate: [UnsignedGuard],
   },
   {pathMatch: 'prefix',
-  path: 'characters/char/:charid',
+  path: 'char/:charid',
   component: CharacterComponent,
   },
-  {path: 'character/char/2',
+  {path: 'char/2',
   component: CharacterComponent,}
 ];
 
